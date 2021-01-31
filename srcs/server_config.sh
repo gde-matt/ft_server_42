@@ -17,3 +17,15 @@ echo "CREATE DATABASE wordpress;" | mysql -u root
 echo "CREATE USER 'gde-matt'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON *.* TO 'gde-matt'@'localhost' WITH GRANT OPTION;" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
+
+
+
+# WordPress
+wget https://wordpress.org/latest.tar.gz
+tar -xvzf latest.tar.gz && rm -rf latest.tar.gzf latest.tar.gz
+cp /root/wp-config.php wordpress/wp-config.php
+mv wordpress /var/www/localhost/
+
+# WordPress Database User
+echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'gde-matt'@'localhost' IDENTIFIED BY 'password';"| mysql -u root
+echo "FLUSH PRIVILEGES;" | mysql -u root
