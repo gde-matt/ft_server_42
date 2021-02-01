@@ -13,7 +13,6 @@ COPY		srcs /root/
 
 RUN		bash /root/server_config.sh
 
+EXPOSE		80 443
+
 ENTRYPOINT	bash /root/start_here.sh
-
-CMD		bash
-
