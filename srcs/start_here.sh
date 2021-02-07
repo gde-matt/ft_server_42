@@ -6,4 +6,4 @@
 
 bash /root/ascii_art_42.sh
 
-bash
+tail -F /dev/null

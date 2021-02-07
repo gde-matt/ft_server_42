@@ -32,7 +32,6 @@ mv wordpress /var/www/localhost/
 # WordPress Database User
 echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'gde-matt'@'localhost' IDENTIFIED BY 'password';"| mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
-mysql wordpress < root/wordpress.sql
 
 
 
